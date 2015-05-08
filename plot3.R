@@ -10,6 +10,7 @@ d <- subset(d, select=c(-Date, -Time), subset = datetime >= t1 & datetime < t2)
 
 # plot
 png(filename="plot3.png", width=480, height=480)
+par(bg="transparent")
 with(d, { plot(datetime, Sub_metering_1, pch=NA, main=NULL,
                ylab="Energy sub metering", xlab="")
           lines(datetime, Sub_metering_1, col="black")

@@ -10,6 +10,7 @@ d <- subset(d, select=c(-Date, -Time), subset = datetime >= t1 & datetime < t2)
 
 # plot
 png(filename="plot2.png", width=480, height=480)
+par(bg="transparent")
 with(d, plot(datetime, Global_active_power, type="l", main=NULL,
              ylab="Global Active Power (kilowatts)", xlab=""))
 dev.off()
